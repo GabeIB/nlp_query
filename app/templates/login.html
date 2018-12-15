@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Query Biz Bot</title>
+	</head>
+	<body>
+		<h1>Prototype</h1>
+		<form action="" method="GET" novalidate>
+			{{ form.hidden_tag() }}
+			<p>
+			{{ form.search.label }}<br>
+			{{ form.search(size=32) }}
+			</p>
+			<p>{{ form.submit() }}</p>
+		</form>
+		<p><b>query: </b>{{ search }}</p>
+		<p><b>first 10 results: </b></p>
+		{% for r in results %}
+		<p>{{ r }}</p>
+		{% endfor %}
+	</body>
+</html>
